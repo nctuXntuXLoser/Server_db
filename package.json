@@ -1,0 +1,28 @@
+{
+  "name": "hacknctu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nctuXntuXLoser/Server_db.git"
+  },
+  "keywords": [
+    "db",
+    "mongo"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nctuXntuXLoser/Server_db/issues"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "mongodb": "^2.2.11",
+    "mongoose": "^4.6.5"
+  },
+  "homepage": "https://github.com/nctuXntuXLoser/Server_db#readme"
+}
