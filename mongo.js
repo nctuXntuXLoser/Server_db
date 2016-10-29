@@ -14,15 +14,17 @@ module.exports = {
 		mongoose.connection.close();
 		res.end('success');
 	},
-	Create_account:function(acc,pass){
+	Create_account:function(acc,pass,res){
 		var mongoose = require('mongoose');
 		mongoose.connect('mongodb://localhost/server');
 		var insert = new normal_user({ account: acc,password:pass, point: 0 });
 		insert.save(function (err) {
 			if (err) {
+				res.end('Failed');
 				console.log('Failed'); 
 				return; 
 			} 
+			res.end('Saved');
 			console.log('Saved'); 
 		});
 		mongoose.connection.close();
@@ -45,8 +47,19 @@ module.exports = {
 			res.end(normal_users[0].account+String(normal_users[0].point));
 		});
 		mongoose.connection.close();
+	},
+	Is_existed:function(acc,res){	
+		var mongoose = require('mongoose');
+		mongoose.connect('mongodb://localhost/server');
+		normal_user.find({ account: acc }, function(err, normal_users) {
+			mongoose.connection.close();			
+			if(normal_users[0]!=null)
+				res.send('true');
+			else
+				res.send('false');		
+		});
+		
 	}
-	
 }
 
 
