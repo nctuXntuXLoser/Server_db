@@ -23,7 +23,8 @@
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "mongodb": "^2.2.11",
-    "mongoose": "^4.6.5"
+    "mongoose": "^4.6.5",
+    "mongoose-random": "^0.1.1"
   },
   "homepage": "https://github.com/nctuXntuXLoser/Server_db#readme"
 }

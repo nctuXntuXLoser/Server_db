@@ -44,7 +44,7 @@ module.exports = {
 		var mongoose = require('mongoose');
 		mongoose.connect('mongodb://localhost/server');
 		normal_user.find({ account: acc }, function(err, normal_users) {
-			res.end(normal_users[0].account+String(normal_users[0].point));
+			res.end(String(normal_users[0].point));
 		});
 		mongoose.connection.close();
 	},
