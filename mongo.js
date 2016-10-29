@@ -9,10 +9,7 @@ module.exports = {
 			else
 				console.log('success');		
 		});
-		console.log(poi);
-		console.log(acc);	
 		mongoose.connection.close();
-		res.end('success');
 	},
 	Create_account:function(acc,pass,res){
 		var mongoose = require('mongoose');
